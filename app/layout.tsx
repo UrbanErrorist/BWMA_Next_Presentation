@@ -8,6 +8,7 @@
 // look inside pages/api/user.ts file to see the backend part of the application where I am using Prisma ORM to connect to Postgres database and create a new user
 // Look inside prisma folder to see the schema.prisma file where I am defining the database schema
 // Look inside table and tableEdit component to see the front end part of the application where i am displaying the data and allowing user to add new new data
+import { Metadata } from "next";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -35,3 +36,5 @@ export default function RootLayout({
 		</html>
 	);
 }
+
+

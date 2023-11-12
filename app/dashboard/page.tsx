@@ -6,15 +6,13 @@
 // Look inside table and tableEdit component to see the front end part of the application where i am displaying the data and allowing user to add new new data
 import Link from "next/link";
 import { Suspense } from "react";
-import Table from "@/components/table";
+import TableClient from "@/components/table_client";
 import TablePlaceholder from "@/components/table-placeholder";
 import TableEdit from "@/components/table-edit";
 import React from "react";
-import { Metadata } from "next";
+
 
 export default async function Home() {
-
-	// await new Promise(r => setTimeout(r, 3000));
 
 	return (
 		<main className="relative flex min-h-screen flex-col items-center justify-center">
@@ -23,7 +21,7 @@ export default async function Home() {
 			</h1>
 			{/* <Advice /> */}
 			<Suspense fallback={<TablePlaceholder />}>
-				<Table />
+				<TableClient />
 			</Suspense>
 
 			<div className="p-2"></div>
@@ -55,46 +53,4 @@ export default async function Home() {
 			</p>
 		</main>
 	);
-}
-
-
-
-export const metadata: Metadata = {
-	title: 'Sample NextJS app',
-	description: 'This app is a sample Next.js app, to demonstrate the main features of Next.js',
-	authors: {
-		name: "HS-FULDA",
-		url: 'https:hs-fulda.de'
-	},
-	keywords: ['next.js', 'javascript', 'Fulda university', 'Computer science'],
-	robots: {
-		index: true,
-		follow: true,
-		'max-snippet': 150,
-		'max-image-preview': 'large',
-		noarchive: true,
-		nosnippet: false,
-		notranslate: true
-	},
-	openGraph: {
-		title: 'Next.js App',
-		description: 'The React Framework for the Web',
-		url: 'https://nextjs.org',
-		siteName: 'Next.js',
-		images: [
-			{
-				url: 'https://nextjs.org/og.png',
-				width: 800,
-				height: 600,
-			},
-			{
-				url: 'https://nextjs.org/og-alt.png',
-				width: 1800,
-				height: 1600,
-				alt: 'My custom alt',
-			},
-		],
-		locale: 'en_US',
-		type: 'website',
-	},
 }
