@@ -1,8 +1,4 @@
-import // Rishabh Goswami
-// matriculation number: 1455991
-//28 October 2023
-
-prisma from "@/lib/prisma";
+import prisma from "@/lib/prisma";
 import { timeAgo } from "@/lib/utils";
 import Image from "next/image";
 import RefreshButton from "./refresh-button";
